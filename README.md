@@ -1,4 +1,4 @@
-                                  /*** 3rd YEAR COLLEGE PROJECT ***/
+                                  /***TO BE IMPLEMENTED IN COLLEGE ***/
 
 Generate QR code from various files and verify the authenticity of the file using digital signature.
 
