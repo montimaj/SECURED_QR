@@ -13,8 +13,7 @@ import java.security.PrivateKey;
 import java.security.PublicKey;
 import java.security.spec.PKCS8EncodedKeySpec;
 
-/* This is the main module that creates the detached digital signature and the public key */
-//Functionality is same to that of the android app module com.oracle.android.GenSig
+/* This is the main module that creates the detached digital signature */
 public class GenSig
 {
     public static void Gen_sig(String file,String dest) throws Exception

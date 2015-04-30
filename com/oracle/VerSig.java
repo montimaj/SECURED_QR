@@ -9,7 +9,6 @@ import java.security.PublicKey;
 import java.security.spec.X509EncodedKeySpec;
 
 /* This is the main module that verifies whether the input file is authentic  */
-//Functionality is same to that of the android app module com.oracle.android.VerSig
 public class VerSig 
 {
     public static boolean verify(String suepk, String sign, String data) throws Exception

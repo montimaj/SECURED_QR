@@ -10,6 +10,8 @@ import java.security.KeyPair;
 import java.security.PrivateKey;
 import java.security.PublicKey;
 
+/* This module writes the public and private keys to files */
+//If keys are already present then ignores the generation operation
 public class GenKeys 
 {
   
