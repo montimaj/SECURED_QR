@@ -25,22 +25,4 @@ System requirements for PC:
 Start the GUI by executing start.sh via the terminal(Ex:  foo@bar:~$ sh start.sh )
 Alternatively change the permission of 'start.sh' & make it executable($ chmod +x start.sh) for once. Then like any other app, just double click on start.sh to run the GUI.
 
-****                                ANDROID APP                                                        ****
 
-SecuredQR is the source for the android app. The app can be used to generate QRCode image and digital signature, public key similar to the PC version. 
-
-The scan feature of the app is restricted to scanning QRCodes of zip files that contain a file, its detached digital signature('sig') and the public key('suepk') only. 
-Any other QRCode scanning will result in an error which will be displayed on the screen!
-
-Decoding any QRCode is also possible via the app!
-
-Android smartphone requirements: 
-
--> Android API 17 or above
-
--> BarcodeScanner app by zxing
-   ( https://play.google.com/store/apps/details?id=com.google.zxing.client.android&hl=en )
-
--> A good built-in camera
-
--> Good CPU and RAM
