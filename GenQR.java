@@ -97,8 +97,8 @@ class GenQR
 	throw new IOException("File too large!");	
       }
       GenSig.Gen_sig(args[0],filePath);
-      String pub="KEYS/pubkey",sign=filePath+"/sig",zipin=filePath+"/result.zip";      
-      String files[]={sign,pub,args[0]};
+      String sign=filePath+"/sig",zipin=filePath+"/result.zip";      
+      String files[]={sign,args[0]};
       ZipCreator.create_zip(zipin,files); //create result.zip
       String f[]={zipin,filePath};     
       result+=QRCode.gen_qrcode(f); //generate QRCode image       

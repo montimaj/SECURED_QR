@@ -97,27 +97,14 @@ export MAIN_DIALOG='
 		<action type="fileselect">XSIG</action>
 	      </button>
 	    </hbox>
-	  </frame>
-    
-	  <frame Choose Appropriate Public Key>
-	    <hbox>
-	      <entry>
-		<variable>PKEY</variable>
-	      </entry>
-	      <button>
-		<input file stock="gtk-open"></input>
-		<variable>pkey</variable>
-		<action type="fileselect">PKEY</action>
-	      </button>
-	    </hbox>
-	  </frame>
+	  </frame>	  
     
 	  <vbox>
 	    <button>
 	      <height>20</height>
 	      <width>40</width>
 	      <label>Verify</label>
-	      <action signal="clicked">clear && java Verify "$XFILE" "$XSIG" "$PKEY"</action>
+	      <action signal="clicked">clear && java Verify "$XFILE" "$XSIG" </action>
 	    </button>
 	  </vbox>
 	 </vbox>

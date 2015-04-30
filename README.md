@@ -25,4 +25,8 @@ System requirements for PC:
 Start the GUI by executing start.sh via the terminal(Ex:  foo@bar:~$ sh start.sh )
 Alternatively change the permission of 'start.sh' & make it executable($ chmod +x start.sh) for once. Then like any other app, just double click on start.sh to run the GUI.
 
+/*** ANDROID APP ***/
+SXCQR is the source for the android app
+If a new public key is generated you need to put it in SXCQR/app/src/main/assets and then compile and execute the app using Android Studio
+
 

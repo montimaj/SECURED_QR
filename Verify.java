@@ -8,7 +8,7 @@ class Verify
   {
       try
       {
-	boolean v=VerSig.verify(args[2],args[1],args[0]);
+	boolean v=VerSig.verify(args[1],args[0]);
 	String[] x={"zenity","--info","--text="+"Verification result: "+v};
 	Process p=new ProcessBuilder(x).start(); //Display verification result in a new window
 	p.waitFor();

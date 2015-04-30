@@ -11,7 +11,7 @@ import java.security.spec.X509EncodedKeySpec;
 /* This is the main module that verifies whether the input file is authentic  */
 public class VerSig 
 {
-    public static boolean verify(String suepk, String sign, String data) throws Exception
+    public static boolean verify(String sign, String data) throws Exception
     {       
             FileInputStream keyfis = new FileInputStream("KEYS/pubkey"); //import encoded public key
             byte[] encKey = new byte[keyfis.available()];  
