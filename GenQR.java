@@ -31,7 +31,7 @@ class QRCode
   {		
     //Base64 is used to encode bytes read from the input file, args[1] is the directory path of the QR image
     String file = args[1]+"/QRCode.png", data = args[0]; 
-    data=read_from_file(data);  //if this exceeds ~3.8KB for Low error correction level then Exception will occur    
+    data=read_from_file(data);  //if this exceeds ~3.8KB for Medium error correction level then Exception will occur    
     Map<EncodeHintType, ErrorCorrectionLevel> hint_map1 = new HashMap<EncodeHintType, ErrorCorrectionLevel>();
     hint_map1.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.M); //hints used by QRCodeWriter.encode for efficient generation of the QRCode image
     createQRCode(data, file,hint_map1,500,500);
