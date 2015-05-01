@@ -9,17 +9,13 @@
 
     <color name="mycolor">#98AFC7</color>
 
-    <string name="title_activity_savetext">Savetext</string>
     <string name="Verify">Enter file name to verify</string>
     <string name="title_activity_ver_sig">VerSig</string>
     <string name="about">About</string>
     <string name="title_activity_about">About</string>
-    <string name="title_activity_gen_qr">GenQR</string>
-    <string name="Gen">Generate QR image,Signature</string>
-    <string name="title_activity_decode_qr">DecodeQR</string>
-    <string name="decode">Decode QR image</string>
 	<string name="sfile">Select Input File</string>
     <string name="developers">Developed by Sayantan-Abhisek-Biswarup </string>
     <string name="ver">SECURED QR v2.1.1</string>
     <string name="about_txt">View source at https://github.com/montimaj/PROJECT_QR</string>
+    <string name="notice">The signature file must be present in the SECURED_QR directory</string>
 </resources>

@@ -3,15 +3,12 @@ package edu.sxccal.qrcodescanner;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
-import edu.sxccal.qrcodescanner.R;
-
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Gravity;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.TextView;
 import android.widget.Button;
 import android.widget.Toast;
 import android.os.Environment;
@@ -22,23 +19,21 @@ import java.io.IOException;
 
 public class QRCode extends Activity implements OnClickListener
 {
-	private Button scanBtn,gen,ver,ab,dqr;
-	public static TextView tv;	
+	private Button scanBtn,ver,ab;
 	public static String scanContent="No result";
-	public static final String filePath=Environment.getExternalStorageDirectory().getAbsolutePath()+"/QR";	
-    
+	public static final String filePath=Environment.getExternalStorageDirectory().getAbsolutePath()+"/QR";
+
 	protected void onCreate(Bundle savedInstanceState)
 	{
         super.onCreate(savedInstanceState);        
         //load the main activity layout
         setContentView(R.layout.activity_qr);        
         //Create directory 
-        File dir=new File(QRCode.filePath);
+        File dir=new File(filePath);
         if(!dir.exists())
         	dir.mkdir();        
         //Check which button is pressed
-        scanBtn = (Button)findViewById(R.id.scan_button);           
-        tv=(TextView)findViewById(R.id.file_write);       
+        scanBtn = (Button)findViewById(R.id.scan_button);
         ver=(Button)findViewById(R.id.ver_sig);
         ab=(Button)findViewById(R.id.ab);
         ab.setOnClickListener(this);    
@@ -47,7 +42,6 @@ public class QRCode extends Activity implements OnClickListener
     }	    
 	public void onClick(View v)
 	{
-		tv.setText("");
 		if(v.getId()==R.id.scan_button)
 		{			
 			IntentIntegrator scanner = new IntentIntegrator(this); //Zxing android interface library 
@@ -80,9 +74,9 @@ public class QRCode extends Activity implements OnClickListener
 					{
 						String files[]=Unzip.unzip(zipin, filePath);
 						if(files[1].equals(""))
-							tv.setText("Image was not scanned properly.Try again!");
+							raise_toast("Image not scanned properly! Try again", Toast.LENGTH_SHORT);
 						else
-							tv.append("\nExtracted files are: \n"+files[0]+"\n"+files[1]);
+							raise_toast("Decoded files are: \n" + files[0] + "\n" + files[1], Toast.LENGTH_LONG);
 					}
 					catch(Exception e)
 					{
@@ -91,35 +85,32 @@ public class QRCode extends Activity implements OnClickListener
 				}									
 			}
 			else
-				tv.setText("Device doesn't support read/write!");
+				raise_toast("Device doesn't support read/write", Toast.LENGTH_SHORT);
 		}
 		else
-		{
-		    Toast toast = Toast.makeText(getApplicationContext(),"No scan data received!", Toast.LENGTH_SHORT);
-		    toast.setGravity(Gravity.CENTER,0,0);
-		    toast.show();		    
-		}	
+			raise_toast("No scan data received!", Toast.LENGTH_SHORT);
 	}
-	
+	public void raise_toast(String message, int length)
+	{
+		Toast toast = Toast.makeText(this, message, length);
+		toast.setGravity(Gravity.CENTER, 0, 0);
+		toast.show();
+	}
 	public boolean checkExternalMedia() //checks if there is read and write access to device storage
 	{
 		    boolean readable = false;
 		    boolean writeable = false;
 		    String state = Environment.getExternalStorageState();
 		    if (Environment.MEDIA_MOUNTED.equals(state)) 
-		    {		       
-		        readable = writeable = true;
-		    }
-		    else if (Environment.MEDIA_MOUNTED_READ_ONLY.equals(state)) 
+		    	readable = writeable = true;
+		    else if (Environment.MEDIA_MOUNTED_READ_ONLY.equals(state))
 		    {		        
 		        readable = true;
 		        writeable = false;
 		    }
 		    else
-		    {		        
-		        readable = writeable = false;
-		    }   
-		    return (readable&&writeable);
+		    	readable = writeable = false;
+		    return (readable && writeable);
 	}		
 	public void write_to_file()
 	{			 			
@@ -134,19 +125,14 @@ public class QRCode extends Activity implements OnClickListener
 		    } 
 		    catch(IOException e)
 		    {		    	
-		    	Log.create_log(e, getApplicationContext()); //Write logs to log.txt
+		    	Log.create_log(e, this); //Write logs to log.txt
 		    }
-		    tv.append("File written to: "+file);
 	}	
 }
 
 /*                               *** LIBRARY OVERVIEW ***                                                              */
 
-/*TextView: Displays text to the user and optionally allows them to edit it. 
-  A TextView is a complete text editor, however the basic class is configured to not allow editing.  
-  Class Details: http://developer.android.com/reference/android/widget/TextView.html
-
-  Button: Represents a push-button widget. 
+/*Button: Represents a push-button widget.
   Push-buttons can be pressed, or clicked, by the user to perform an action. 
   Class Details: http://developer.android.com/reference/android/widget/Button.html
 

@@ -22,7 +22,11 @@ public class Log
 			 PrintWriter pw=new PrintWriter((new BufferedWriter(new FileWriter(log, true))));
 			 pw.println("-> "+e.toString());			
 			 pw.close();			 			 
-		 }catch(Exception e2){}
+		 }
+		catch(Exception e2)
+		{
+			e2.printStackTrace();
+		}
      }
 }
 

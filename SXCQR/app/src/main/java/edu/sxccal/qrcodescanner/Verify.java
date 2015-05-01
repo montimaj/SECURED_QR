@@ -1,13 +1,13 @@
 package edu.sxccal.qrcodescanner;
 
-import android.content.Context;
 import android.content.res.AssetManager;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.widget.Button;
-import android.widget.TextView;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.View;
+import android.widget.Toast;
 
 import com.oracle.android.VerSig;
 
@@ -18,7 +18,6 @@ import java.io.InputStream;
 public class Verify extends Activity implements View.OnClickListener
 {	
 	private Button bt;
-	public static TextView tv;
 	private final int PICKFILE_RESULT_CODE = 1;
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -55,19 +54,20 @@ public class Verify extends Activity implements View.OnClickListener
 	}
 	public void verify_data(String f2)
 	{
-		tv= (TextView)findViewById(R.id.file_verify);
-		tv.setText("");
 		try
 		{
 			//get absolute paths of the files
 			String f1=QRCode.filePath + "/sig";
 			AssetManager assetManager=getAssets();
-			InputStream is=assetManager.open("pubkey");
-			VerSig.verify(is,f1,f2 );
+			InputStream is=assetManager.open("pubkey.txt");
+			boolean result=VerSig.verify(is,f1,f2);
+			Toast toast = Toast.makeText(this,"Digital Signature verification result: " + result, Toast.LENGTH_LONG);
+			toast.setGravity(Gravity.CENTER, 0, 0);
+			toast.show();
 		}
 		catch(Exception e)
 		{
-			Log.create_log(e, getApplicationContext());
+			Log.create_log(e, this);
 		}
-	}	
+	}
 }

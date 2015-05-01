@@ -7,7 +7,6 @@ import java.io.File;
 
 import java.io.IOException;
 import java.util.zip.ZipEntry;
-import java.util.zip.ZipException;
 import java.util.zip.ZipInputStream;
 
 //Module to extract zip file
@@ -43,6 +42,8 @@ public class Unzip
 	    }
 	    zipIn.close();                
     	String files[]={f1,f2};
+		File zfile=new File(zipFilePath);
+		zfile.delete();
         return files;
     }    
     private static void extractFile(ZipInputStream zipIn, String filePath) throws IOException
