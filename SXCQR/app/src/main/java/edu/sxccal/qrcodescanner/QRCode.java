@@ -6,6 +6,7 @@ import com.google.zxing.integration.android.IntentResult;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.util.Base64;
 import android.view.Gravity;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -118,9 +119,9 @@ public class QRCode extends Activity implements OnClickListener
 		    File file = new File(dir, "/result.zip");		    
 		    try 
 		    {
-		        FileOutputStream f = new FileOutputStream(file);		        
-		        for(int i=0;i<scanContent.length();++i)
-		        	f.write(scanContent.charAt(i));		        		        
+		        FileOutputStream f = new FileOutputStream(file);
+				byte[] data=Base64.decode(scanContent.getBytes(), Base64.DEFAULT);
+		        f.write(data);
 		        f.close();
 		    } 
 		    catch(IOException e)
