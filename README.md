@@ -18,7 +18,9 @@ System requirements for PC:
 
 -> JDK 1.8 or above
 
--> GTK+
+-> libgtk2.0-0
+
+-> libgtk3-0-0
 
 -> gtkdialog
 
