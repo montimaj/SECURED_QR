@@ -9,12 +9,21 @@ import java.io.IOException;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
-//Module to extract zip file
-////Throws java.lang.Exception if an exception occurs
+/**
+ * Extract zip file
+*/
 public class Unzip
 {    
-    private static final int BUFFER_SIZE = 4096;      
-    public static String[] unzip(String zipFilePath, String destDirectory) throws IOException
+    private static final int BUFFER_SIZE = 4096;
+
+	/**
+	 * Extract entries in the zip file
+	 * @param zipFilePath input zip file
+	 * @param destDirectory output directory where the extracted files will be stored
+	 * @return array of String containing filePaths of the extracted files
+	 * @throws IOException
+	 */
+	public static String[] unzip(String zipFilePath, String destDirectory) throws IOException
     {
     	String f1=destDirectory + "/sig";
     	String f2="";
@@ -45,7 +54,14 @@ public class Unzip
 		File zfile=new File(zipFilePath);
 		zfile.delete();
         return files;
-    }    
+    }
+
+	/**
+	 * Writes extracted files to output directory
+	 * @param zipIn input zip file
+	 * @param filePath output directory
+	 * @throws IOException
+	 */
     private static void extractFile(ZipInputStream zipIn, String filePath) throws IOException
     {
         BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(filePath));
@@ -58,12 +74,3 @@ public class Unzip
         bos.close();
     }    
 }
-/*				***		LIBRARY OVERVIEW	***	  				    */
-
-/*java.util.zip: Provides classes for reading and writing the standard ZIP and GZIP file formats.
-  Class Details: http://docs.oracle.com/javase/7/docs/api/java/util/zip/package-summary.html
-
-  BufferedOutputStream: Setting up such an output stream, an application can write bytes 
-  to the underlying output stream without necessarily causing a call to the underlying system for each byte written.
-  Class Details: https://docs.oracle.com/javase/7/docs/api/java/io/BufferedOutputStream.html
-*/

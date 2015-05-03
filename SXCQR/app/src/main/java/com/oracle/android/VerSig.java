@@ -14,11 +14,21 @@ import java.security.spec.X509EncodedKeySpec;
 
 import org.spongycastle.jce.provider.BouncyCastleProvider;
 
-//Verifies input file
-//Functionality is same to that of the PC module com.oracle.VerSig
+/**
+ * Verifies input file
+*/
 public class VerSig 
 {
-    public static boolean verify(InputStream is,String sign, String data ) throws Exception
+
+	/**
+	 * Checks whether input file is authentic or not
+	 * @param is Represents pubkey.txt
+	 * @param sign Path to the 'sig' file
+	 * @param data File to be verified
+	 * @return true if authenticated, false otherwise
+	 * @throws Exception
+	 */
+	public static boolean verify(InputStream is,String sign, String data ) throws Exception
 	{
 			byte[] encKey = new byte[is.available()];
 			is.read(encKey);
@@ -46,16 +56,3 @@ public class VerSig
 			return verifies;
 	}
 }
-
-/*								***		LIBRARY OVERVIEW	***	                              		*/
-
-/*X509EncodedKeySpec: Represents the ASN.1 encoding of a public key
- ASN.1 Details: http://en.wikipedia.org/wiki/Abstract_Syntax_Notation_One
- Class Details: https://docs.oracle.com/javase/7/docs/api/java/security/spec/X509EncodedKeySpec.html
- 
- KeyFactory: Used to convert keys (opaque cryptographic keys of type Key) 
- into key specifications (transparent representations of the underlying key material), and vice versa. 
- Class Details: https://docs.oracle.com/javase/7/docs/api/java/security/KeyFactory.html
-*/
- 
- 

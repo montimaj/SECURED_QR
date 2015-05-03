@@ -8,8 +8,16 @@ import android.content.Context;
 import android.view.Gravity;
 import android.widget.Toast;
 
-public class Log 
-{	
+/**
+ * Create log.txt
+ */
+public class Log
+{
+	/**
+	 * Appends error messages to Log.txt and raises {@link Toast}
+	 * @param e Exception object
+	 * @param context Activity context where the {@link Toast} will be shown
+	 */
 	public static void create_log(Exception e, Context context)
 	{		
 		try
@@ -29,9 +37,3 @@ public class Log
 		}
      }
 }
-
-/*				***		LIBRARY OVERVIEW	***	    */
-
-/*PrintWriter: Prints formatted representations of objects to a text-output stream
-  Class Details: http://docs.oracle.com/javase/7/docs/api/java/io/PrintWriter.html
-*/
