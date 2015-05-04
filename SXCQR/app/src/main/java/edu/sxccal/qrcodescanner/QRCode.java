@@ -102,7 +102,7 @@ public class QRCode extends Activity implements OnClickListener
 	}
 
 	/**
-	 * Display a {@link Toast}
+	 * Display a { @link android.widget.Toast }
 	 * @param message Message to be shown
 	 * @param length Length of the popup window
 	 */

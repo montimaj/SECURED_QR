@@ -14,8 +14,8 @@ public class ZipCreator
 {   
 	/**
 	 * Create result.zip
-	 * @param zipFile
-	 * @param infiles
+	 * @param zipFile Output zip file path
+	 * @param infiles input files to be zipped
 	 * @throws IOException
 	 */
 	public static void create_zip(String zipFile,String[] infiles) throws IOException

@@ -15,7 +15,7 @@ import java.security.spec.X509EncodedKeySpec;
 import org.spongycastle.jce.provider.BouncyCastleProvider;
 
 /**
- * Verifies input file
+ * Verifies input file for Android OS
 */
 public class VerSig 
 {

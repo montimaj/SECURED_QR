@@ -28,7 +28,8 @@ public class QRCode
 	  * <p>
 	  * args[0] is the path to Result.zip and 
 	  * args[1] is the output directory to store QRCode.png
-	  * @return Path to QRCode.png 
+	  * @return Path to QRCode.png
+	  * @throws Exception 
 	  */
 	public static String gen_qrcode(String[] args) throws Exception
 	{		

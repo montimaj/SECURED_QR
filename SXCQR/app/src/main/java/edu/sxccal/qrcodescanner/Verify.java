@@ -62,8 +62,8 @@ public class Verify extends Activity implements View.OnClickListener
 	}
 
 	/**
-	 * Displays verification result as a {@link Toast}
-	 * @param f2
+	 * Displays verification result as a { @link android.widget.Toast }
+	 * @param f2 File to be verified
 	 */
 	public void verify_data(String f2)
 	{
