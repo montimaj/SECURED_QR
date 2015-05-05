@@ -25,7 +25,10 @@ import java.io.IOException;
 public class QRCode extends Activity implements OnClickListener
 {
 	private Button scanBtn,ver,ab;
-	public static String scanContent="No result";
+	private String scanContent="No result";
+	/**
+	 * The directory where the generated files are to be kept
+	 */
 	public static final String filePath=Environment.getExternalStorageDirectory().getAbsolutePath()+"/QR";
 
 	@Override
@@ -102,7 +105,7 @@ public class QRCode extends Activity implements OnClickListener
 	}
 
 	/**
-	 * Display a { @link android.widget.Toast }
+	 * Display a {@link android.widget.Toast}
 	 * @param message Message to be shown
 	 * @param length Length of the popup window
 	 */
@@ -135,7 +138,8 @@ public class QRCode extends Activity implements OnClickListener
 	}
 
 	/**
-	 * Write result.zip
+	 * Write result.zip to the specified external storage directory
+	 * @see #filePath
 	 */
 	public void write_to_file()
 	{			 			

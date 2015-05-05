@@ -23,7 +23,7 @@ import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 
 public class QRCode 
 {
-	 /**
+	/**
 	  * @param args Input arguments where 
 	  * <p>
 	  * args[0] is the path to Result.zip and 
@@ -49,7 +49,7 @@ public class QRCode
 	  * @param s Input file path
 	  * @return Base64 encoded String
 	  * @throws IOException
-	*/
+	  */
 	public static String read_from_file(String s) throws IOException
 	{
 	    FileInputStream fp=new FileInputStream(s);    
@@ -60,7 +60,7 @@ public class QRCode
 	    return s;
 	}
 	
-	 /**
+	/**
 	  * Generates QRCode.png
 	  * @param data String to be encoded in QRCode
 	  * @param file Output file path
@@ -69,7 +69,7 @@ public class QRCode
 	  * @param qrw Width of QRCode.png
 	  * @throws WriterException generally if input data is too big
 	  * @throws IOException
-	 */
+	  */
 	public static void createQRCode(String data, String file, Map<EncodeHintType, ErrorCorrectionLevel> hint_map, int qrh, int qrw) throws WriterException, IOException
 	{		
 	    BitMatrix matrix = new QRCodeWriter().encode(data, BarcodeFormat.QR_CODE, qrw, qrh, hint_map); //Zxing libraries--> BitMatrix, MatrixToImageWriter

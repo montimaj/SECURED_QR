@@ -8,7 +8,7 @@ import java.util.Date;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
-/*
+/**
  * Creates the log file Log.txt
  */
 public class Log
