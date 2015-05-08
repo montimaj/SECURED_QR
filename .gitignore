@@ -6,3 +6,7 @@ Logs/
 
 #TESTS
 TESTS/
+
+.directory
+.classpath
+

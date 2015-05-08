@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 
 import com.oracle.GenSig;
+import org.apache.pdfbox.ExtractText;
 
 /**
 * QRCode generation module
@@ -23,6 +24,18 @@ import com.oracle.GenSig;
 public class GenQR
 {  
 	/**
+	 * Checks whether the input file is a pdf file
+	 * @param file Input file 
+	 * @return true if pdf false otherwise
+	 */
+	private static boolean is_pdf(String file)
+	{
+		String ext=file.substring(file.lastIndexOf('.')+1, file.length());
+		if(ext.equalsIgnoreCase("pdf"))
+			return true;
+		return false;		
+	}
+	/**
 	  * @param args Input arguments where args[0] should be input file directory, args[1] the output directory
 	  * @throws Exception 
 	*/   
@@ -31,7 +44,7 @@ public class GenQR
 	    Process p1=null;
 	    try
 	    {     
-	      if(args[0].isEmpty() || args[1].isEmpty())
+	      if(args.length<2 || args[0].isEmpty() || args[1].isEmpty())
 	    	  throw new IOException("Invalid input!");      
 	      File file=new File(args[0]);
 	      if(!file.exists())
@@ -41,13 +54,21 @@ public class GenQR
 	      String filePath = args[1]; 
 	      File dir = new File(filePath);   
 	      if(!dir.exists())      
-	    	  dir.mkdir(); //create directory to store 'sig' and 'suepk' 	          
+	    	  dir.mkdir(); //create directory to store 'sig' and 'suepk' 
+	      String result="";
+	      if(is_pdf(args[0]))
+	      {	    	  
+	    	  String[] p={args[0], args[1]+"/out.txt"};
+	    	  ExtractText.main(p); //extract text from pdf file
+	    	  args[0]=args[1]+"/out.txt";
+	    	  result="Text file generated from the pdf file: "+args[0]+"\n";	    			  
+	      }
 	      GenSig.Gen_sig(args[0],filePath);
 	      String sign=filePath+"/sig",zipin=filePath+"/result.zip";      
 	      String files[]={sign,args[0]};
 	      ZipCreator.create_zip(zipin,files); //create result.zip
 	      String f[]={zipin,filePath};     
-	      String result=QRCode.gen_qrcode(f); //generate QRCode image       
+	      result+=QRCode.gen_qrcode(f); //generate QRCode image       
 	      String[] x1={"zenity","--info","--title=Result","--text="+result};
 	      Process p2=new ProcessBuilder(x1).start(); //Display window to notify about successful generation
 	      p1.destroy(); //Destroy progress process
@@ -58,7 +79,8 @@ public class GenQR
 	    }
 	    catch(Exception e)
 	    {    
-	      p1.destroy();
+	      if(p1!=null)
+	    	p1.destroy();
 	      String s=Log.create_log(e);
 	      String[] x={"zenity","--error","--text="+s};
 	      p1=new ProcessBuilder(x).start(); //Show error window
