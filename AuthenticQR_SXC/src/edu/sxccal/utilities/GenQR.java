@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 
 import com.oracle.GenSig;
+
 import org.apache.pdfbox.ExtractText;
 
 /**
@@ -34,7 +35,8 @@ public class GenQR
 		if(ext.equalsIgnoreCase("pdf"))
 			return true;
 		return false;		
-	}
+	}	
+	
 	/**
 	  * @param args Input arguments where args[0] should be input file directory, args[1] the output directory
 	  * @throws Exception 
@@ -56,6 +58,7 @@ public class GenQR
 	      if(!dir.exists())      
 	    	  dir.mkdir(); //create directory to store 'sig' and 'suepk' 
 	      String result="";
+	      
 	      if(is_pdf(args[0]))
 	      {	    	  
 	    	  String[] p={args[0], args[1]+"/out.txt"};
@@ -70,7 +73,7 @@ public class GenQR
 	      String f[]={zipin,filePath};     
 	      result+=QRCode.gen_qrcode(f); //generate QRCode image       
 	      String[] x1={"zenity","--info","--title=Result","--text="+result};
-	      Process p2=new ProcessBuilder(x1).start(); //Display window to notify about successful generation
+	      Process p2=new ProcessBuilder(x1).start(); //Display window to notify about successful generation	      
 	      p1.destroy(); //Destroy progress process
 	      p2.waitFor(); //Run process p2 until "OK" is pressed      
 	      String[] x2={"xdg-open",args[1]+"/QRCode.png"};

@@ -15,7 +15,7 @@
     <string name="title_activity_about">About</string>
 	<string name="sfile">Select Input File</string>
     <string name="developers">Developed by Sayantan-Abhisek-Biswarup </string>
-    <string name="ver">SECURED QR v2.1.1</string>
+    <string name="ver">SECURED QR v1.0</string>
     <string name="about_txt">View source at https://github.com/montimaj/SECURED_QR</string>
     <string name="notice">The signature file must be present in the QR directory</string>
 </resources>

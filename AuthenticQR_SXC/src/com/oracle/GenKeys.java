@@ -80,7 +80,9 @@ public class GenKeys
 	    }
 	    catch(Exception e)
 	    {
-		    String s=Log.create_log(e);
+		    if(p1!=null)
+		    	p1.destroy();
+	    	String s=Log.create_log(e);
 		    String[] x={"zenity","--error","--text="+s};
 		    p1=new ProcessBuilder(x).start(); //Show error window
 		    p1.waitFor();

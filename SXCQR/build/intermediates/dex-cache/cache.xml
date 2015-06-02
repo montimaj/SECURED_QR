@@ -2,88 +2,53 @@
 <items version="2" >
 
     <item
-        jar="/home/monti/Monti_Backup/PROGS/SXCQR/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jar="/home/monti/MONTI/monti/Monti_Backup/PROGS/SXCQR/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/home/monti/MONTI/monti/Monti_Backup/PROGS/SXCQR/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-2acdeb53ab6800f2a5b2526315f93106d35d388f.jar" />
+    </item>
+    <item
+        jar="/home/monti/MONTI/monti/Monti_Backup/PROGS/SXCQR/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="/home/monti/Monti_Backup/PROGS/SXCQR/app/build/intermediates/pre-dexed/debug/classes-cd934f80c95a27e9130ed97e3be5b35f3348248a.jar" />
+        <dex dex="/home/monti/MONTI/monti/Monti_Backup/PROGS/SXCQR/app/build/intermediates/pre-dexed/debug/classes-0f99953e5dc32299a36010d7a2a834c7bc74e968.jar" />
     </item>
     <item
-        jar="/home/monti/Monti_Backup/PROGS/SecuredQR/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="/home/monti/Monti_Backup/PROGS/SecuredQR/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-a33e6c0928c3fcd06143c6c07dd98ba9b308908a.jar" />
-    </item>
-    <item
-        jar="/home/monti/Monti_Backup/PROGS/SXCQR/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="/home/monti/Monti_Backup/PROGS/SXCQR/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-1af233bcf84405b3c6658765853e597182ca6f2e.jar" />
-    </item>
-    <item
-        jar="/home/monti/Monti_Backup/PROGS/SXCQR/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jar="/home/monti/MONTI/monti/Monti_Backup/PROGS/SXCQR/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="/home/monti/Monti_Backup/PROGS/SXCQR/app/build/intermediates/pre-dexed/debug/classes-72924f295a2243730be63f6b5ade8146cea07084.jar" />
+        <dex dex="/home/monti/MONTI/monti/Monti_Backup/PROGS/SXCQR/app/build/intermediates/pre-dexed/debug/classes-2dfb807aae6457413a404c5b50df1ed22c8d6967.jar" />
     </item>
     <item
-        jar="/home/monti/Monti_Backup/PROGS/SecuredQR/app/libs/zxing/core.jar"
+        jar="/home/monti/MONTI/monti/Monti_Backup/PROGS/SXCQR/app/libs/zxing/core.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="cba0b93b0072105d808ef7a00a107a4eb97874e7">
-        <dex dex="/home/monti/Monti_Backup/PROGS/SecuredQR/app/build/intermediates/pre-dexed/debug/core-a08ba4cea20ed3cb1b768915902ef5b0eee49411.jar" />
+        <dex dex="/home/monti/MONTI/monti/Monti_Backup/PROGS/SXCQR/app/build/intermediates/pre-dexed/debug/core-4406ccdfa01c7f80c4e743c3b1dffcbf8208cd74.jar" />
     </item>
     <item
-        jar="/home/monti/Monti_Backup/PROGS/SecuredQR/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="/home/monti/Monti_Backup/PROGS/SecuredQR/app/build/intermediates/pre-dexed/debug/classes-5d3df844be18dea660e3852d6411a68b521eba21.jar" />
-    </item>
-    <item
-        jar="/home/monti/Monti_Backup/PROGS/SXCQR/app/libs/spongycastle/core-1.51.0.0.jar"
+        jar="/home/monti/MONTI/monti/Monti_Backup/PROGS/SXCQR/app/libs/spongycastle/core-1.51.0.0.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="0f642963312ea0e615ad65f28adc5a5b3a2a0862">
-        <dex dex="/home/monti/Monti_Backup/PROGS/SXCQR/app/build/intermediates/pre-dexed/debug/core-1.51.0.0-397402581413e641ea9ea1e0522097f68a1dca43.jar" />
+        <dex dex="/home/monti/MONTI/monti/Monti_Backup/PROGS/SXCQR/app/build/intermediates/pre-dexed/debug/core-1.51.0.0-997656a5e8021a4d0e6bd6165ee1a540fbda5779.jar" />
     </item>
     <item
-        jar="/home/monti/Monti_Backup/PROGS/SXCQR/app/libs/spongycastle/prov-1.51.0.0.jar"
+        jar="/home/monti/MONTI/monti/Monti_Backup/PROGS/SXCQR/app/libs/spongycastle/prov-1.51.0.0.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="6755081df770180856ca48694b40cd34c2208128">
-        <dex dex="/home/monti/Monti_Backup/PROGS/SXCQR/app/build/intermediates/pre-dexed/debug/prov-1.51.0.0-9741d7bb69eddae19e862813e74fd73ea36f924d.jar" />
+        <dex dex="/home/monti/MONTI/monti/Monti_Backup/PROGS/SXCQR/app/build/intermediates/pre-dexed/debug/prov-1.51.0.0-aeb910723bcbf053ee0a4492edd821d35324e14d.jar" />
     </item>
     <item
-        jar="/home/monti/Monti_Backup/PROGS/SecuredQR/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="/home/monti/Monti_Backup/PROGS/SecuredQR/app/build/intermediates/pre-dexed/debug/classes-344b76ef6b82cd5689352d0cdc62a33501d0adce.jar" />
-    </item>
-    <item
-        jar="/home/monti/Monti_Backup/PROGS/SXCQR/app/libs/bouncycastle/bcprov-jdk15on-152.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="88a941faf9819d371e3174b5ed56a3f3f7d73269">
-        <dex dex="/home/monti/Monti_Backup/PROGS/SXCQR/app/build/intermediates/pre-dexed/debug/bcprov-jdk15on-152-f1118e1630fe7e9ca7c13d262051728bb23f15c5.jar" />
-    </item>
-    <item
-        jar="/home/monti/android-sdks/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jar="/home/monti/MONTI/monti/android-sdks/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="/home/monti/Monti_Backup/PROGS/SecuredQR/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-1d93497e1c90cfdee02b15e843a0b134557fa1be.jar" />
-    </item>
-    <item
-        jar="/home/monti/Monti_Backup/PROGS/SXCQR/app/libs/zxing/core.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="cba0b93b0072105d808ef7a00a107a4eb97874e7">
-        <dex dex="/home/monti/Monti_Backup/PROGS/SXCQR/app/build/intermediates/pre-dexed/debug/core-63736ba063e22676cc9bb97675172f4367d80409.jar" />
+        <dex dex="/home/monti/MONTI/monti/Monti_Backup/PROGS/SXCQR/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-9b124fb6208ef19ff4853880c720e6063f8cba12.jar" />
     </item>
 
 </items>
