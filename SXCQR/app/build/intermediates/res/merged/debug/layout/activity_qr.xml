@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@drawable/encrypt" 
+	android:icon="@drawable/cryptography" >
+
+   <Button
+       android:id="@+id/ab"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentBottom="true"
+       android:background="#0099FF"
+       android:text="@string/about"
+       android:textColor="#FFFFFF" />
+
+
+    <Button
+        android:id="@+id/scan_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#0099FF"
+        android:text="@string/scan"
+        android:textColor="#FFFFFF"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/ver_sig"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#0099FF"
+        android:text="@string/Verify"
+        android:textColor="#FFFFFF"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+	
+</RelativeLayout><!-- From: file:/home/sayantan/MONTI/monti/Monti_Backup/PROGS/SXCQR/app/src/main/res/layout/activity_qr.xml -->
